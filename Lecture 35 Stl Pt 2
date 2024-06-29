@@ -1,0 +1,90 @@
+// Stl Pt 2
+
+/*#include<iostream>
+#include<stack>
+using namespace std;
+
+int main()
+{
+
+  stack<int> a;
+
+  a.push(5);
+  a.push(6);
+  a.push(7);
+
+  // 7 6 5
+
+  cout<<a.front()<<endl;
+
+  a.pop();
+
+  cout<<a.back()<<endl;
+
+  if(a.empty()==0)
+  {
+    cout<<"The stack is currently not empty";
+  }
+  else
+  {
+    cout<<"The stack is empty ";
+  }
+
+  a.pop();
+  b.pop();
+
+  if(a.empty()==0)
+  {
+    cout<<"The stack is currently not empty";
+  }
+  else
+  {
+    cout<<"The stack is empty ";
+  }
+  }*/
+
+/*#include<iostream>
+#inlcude<map>
+
+using namespace std;
+
+int main()
+{
+  map<string,int> hash;
+
+  hash["sudha"] = 1;
+  hash["programming"] = 2;
+  hash["reddy"] = 3;
+
+  cout<<"The value of sudha in the hashtable is"<<hash["c++"];
+
+  for(auto j=hash.begin();j!=hash.ennd();j++)
+  {
+    cout<<"the key will be "<<j->first<<"The value in the key will be "<<j->second<<endl;
+
+  }
+}*/
+
+#include<iostream>
+#include<list>
+using namespace std;
+
+int main()
+{
+  list<int> a;
+
+  a.push_back(4);
+  a.push_front(2);
+  a.pop_back(3);
+  a.pop_front(2);
+
+  a.pop_back();
+  a.pop_front();
+
+  a.sort();
+
+  for(auto i=a.begin();i!=a.end();i++)
+  {
+    cout<<*i;
+  }
+}
