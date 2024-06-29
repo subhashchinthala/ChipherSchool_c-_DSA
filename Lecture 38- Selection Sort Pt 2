@@ -1,0 +1,51 @@
+// Lecture 38- Selection Sort Pt 2
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int a[10];
+
+  int i;
+
+
+  for(i=0;i<9;i++) 
+  {
+    least_index =i;
+
+
+  
+
+  // start of selection sort
+
+  /*int least_index; // stores the index of the least elements
+
+  int j;*/
+
+  int(j=i;j<10;j++)
+  {
+
+    least_index = 0;
+
+  for(j=0;j<10;j++)
+  {
+    if(a[j]<a[least_index]) least_index=j; // If we find an index in j=(0,9) at which a[j] is less than the least index which we have assumed, then this j will be the new least index;
+
+
+  }
+
+  int temp;
+
+  // interchanging the first elements with the least element
+
+  temp = a[0];
+  a[i] = a[least_index];
+  a[least_index] = temp;
+  }
+
+  cout<<"The elements after sorting are : ";
+  for(i=0;i<10;i++) cout<<a[i]<<" ";
+
+}
+}
