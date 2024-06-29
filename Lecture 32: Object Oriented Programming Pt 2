@@ -1,0 +1,115 @@
+// Object Oriented Programming Pt 2
+
+#include<iostream>
+using namespace std;
+
+
+// The vehicle is based class
+
+class Vehicle
+{
+  public:
+
+  int number_typers;
+  string name;
+  int capacity;
+  int milegage;
+
+  
+
+};
+
+// Now I will inherit the features of the base class into the derived classes
+
+class SchoolBus: public Vehicle
+
+{
+  
+
+  string school_name;
+  int number_holidays;
+
+  public:
+
+  void printname()
+  {
+    cout<<name;
+  }
+
+  
+
+  /*void printnameofschool()
+  {
+    cout<<"The name of the school is "<<name;
+  }*/
+
+
+
+  /*private :
+
+  int marks;
+  int attendance;
+  string name;
+
+  public:
+
+  void displaymarks()
+  {
+    cout<<marks;
+
+  }*/
+};
+
+
+class Car: public Vehicle // Derived class car has inherited all the data from the base class vehicle
+{
+
+  // No member named milage
+  // No member function named calculatemilage
+
+
+  private:
+  
+  int number_airbags;
+  int ac_consumption;
+
+  public:
+
+  void printname()
+  {
+    cout<<name;
+  }
+};
+
+class SCV: public Car
+
+{
+  public:
+
+  int four_wheel_drive:
+
+};
+
+
+int main()
+
+{
+  Car a;
+  SchoolBus b;
+
+  a.name = "Suzuki";
+  b.name = "Toyota";
+
+  a.printname();
+  cout<<endl;
+  b.printname();
+
+  /*SUV a;
+
+  a.milegage = 50;*/
+
+  
+
+}
+
+// The base class is public
