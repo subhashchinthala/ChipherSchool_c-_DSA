@@ -1,0 +1,52 @@
+// Character Array And Strings Pt 2
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+    /* string name; // Over here string is a new datatype and not a name so string is similat=r to int, float, double
+
+   cin>>name;
+   
+   int i;
+
+   for(i=0;i<5;i++)
+   {
+    cout<<name[i]<<endl;
+   }*/
+
+  string a;
+  string b;
+  string c;
+
+  //int a;
+  //int b;
+  //int c;
+
+  // instead of using cin, you use something called a getline
+
+  //cin>>a;
+  
+  getline(cin,a);
+
+  // getline is a function which is why you can see(), (cin, variable  where you want to store the value of the line which is being as input)
+
+  cout<<"Your full name is: "<<a<<endl;
+
+  
+
+  //c = a+b;   // This is called string concatenation // Or in simple terms string addition
+
+  //cout<<"The combined word is: "<<c;
+  //cout<<"The length of the combined name is "<<c.length();
+
+  return 0;
+
+
+
+
+    
+}
