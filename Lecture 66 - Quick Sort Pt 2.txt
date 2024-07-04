@@ -1,0 +1,118 @@
+// Lecture 66 - Quick Sort Pt 2
+
+#include<iostream>
+using namespace std;
+
+int partition(int *arr, int start, int end)
+{
+    // this function places the start elements in its correct position and returns this position  value 
+
+    // First step is to find the correct position of the start elements
+
+    // finding all the elements which are less than the partition elements
+
+    int i,number_lessthan_index;
+    for(i=start+1,number_lessthan_index=0; i<end+1; i++)
+    {
+        if(arr[i]<arr[start])
+        {
+            // This means that this elements will be to be left of the partition elements
+            number_lessthan_index++;
+        }
+    }
+
+    // now the acutual index will just be :
+    int correct_index;
+
+    correct_index = start + number_lessthan_part;
+
+    // I will simply swap the start elements and the correct index elements ;
+
+    int temp;
+
+    temp =arr[start];
+    arr[start] = arr[correct_index];
+    arr[correct_index] = temp;
+
+    // Now after we have placed this elements in its correct position, we need to make sure that this is acutually annd its actual position
+
+    // Making sure that this elements is at its correct position :
+
+    int i,j;
+
+    i = start;
+    j = end;
+
+    while(i<correct_index && j>correct_index)
+    {
+        while(arr[i]<arr[correct_index])
+        {
+            // This while loop will keep in transversing until we find an elements to the right of correct index which is greater than correct_index 
+            i++;
+        }
+        while(arr[j]>arr[correct_index])
+        {
+            // This loop will break when we find an elements which is less than correct index 
+            j--;
+        }
+
+        if(i<correct_index && j>correct_index)
+        {
+            int temp;
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+            i++;
+            j--;
+
+
+        }
+    }
+
+    return correct_index;
+}
+
+void quickSort(int *arr, int start, int end)
+{
+    if(start>=end) return;
+
+   // partition is the element which is at its "correct place " --> its position doesnt change even after we sort the numbers,
+
+    // First step is to find a pasrtion such that its 
+
+    int partition;
+
+    partition_index = partition(arr, start, end );
+
+    // this function will return the acutual position of the start element
+
+    // since after running the function, i know that the start element is placed in the "correct " position and we know that position throught_index , We dont need to chnage the position of partition in index anymore
+
+
+    quickSort(arr, start,partition_index-1);
+    quickSort(arr,partition_index+1,end);
+
+}
+
+int main()
+{
+    int size;
+
+    int arr[7] = {5,1,3,7,10,14,2};
+    size =7;
+
+    quickSort(arr,0,size-1);
+
+    int k;
+
+    for(k=0;k<size;k++)
+    {
+        cout<<arr[k]<<" ";
+
+    }
+
+    return 0;
+
+
+}
